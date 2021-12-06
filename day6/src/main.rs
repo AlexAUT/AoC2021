@@ -10,7 +10,7 @@ fn main() {
         .split(',')
         .map(|x| lut_task1[x.parse::<usize>().unwrap()] as u64)
         .sum();
-    println!("[Task2] Number of fishes: {}", number_of_fishes);
+    println!("[Task1] Number of fishes: {}", number_of_fishes);
 
     let lut_task2 = calculate_lut_for_growth(256);
     let number_of_fishes: u128 = input
@@ -20,7 +20,7 @@ fn main() {
         .split(',')
         .map(|x| lut_task2[x.parse::<usize>().unwrap()] as u128)
         .sum();
-    println!("[Task1] Number of fishes: {}", number_of_fishes);
+    println!("[Task2] Number of fishes: {}", number_of_fishes);
 }
 
 fn calculate_lut_for_growth(number_of_days: u32) -> Vec<u64> {
