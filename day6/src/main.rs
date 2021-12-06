@@ -24,12 +24,7 @@ fn main() {
 }
 
 fn calculate_lut_for_growth(number_of_days: u32) -> Vec<u64> {
-    let mut fishes: Vec<u8> = Vec::new();
-    fishes.reserve(1024);
-    fishes.push(6);
-
     let mut lut: Vec<u64> = Vec::new();
-
     let mut buckets: Vec<u64> = vec![0;9];
     buckets[6] = 1;
 
@@ -45,7 +40,6 @@ fn calculate_lut_for_growth(number_of_days: u32) -> Vec<u64> {
         if day >= number_of_days {
             lut.push(buckets.iter().sum());
         }
-        println!("Day {}", day);
     }
     lut.reverse();
     lut
