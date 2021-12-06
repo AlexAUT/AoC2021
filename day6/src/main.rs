@@ -28,7 +28,7 @@ fn calculate_lut_for_growth(number_of_days: u32) -> Vec<u64> {
     let mut buckets: Vec<u64> = vec![0;9];
     buckets[6] = 1;
 
-    // Simulate 80 days for a single fish to generate a lookup table
+    // Simulate +7 days for a single fish to generate a lookup table for all starting values
     for day in 1..number_of_days + 7 {
         buckets.rotate_left(1);
 
